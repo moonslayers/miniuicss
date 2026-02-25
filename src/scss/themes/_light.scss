@@ -34,7 +34,6 @@
 
   --#{$prefix}-border-color: #e5e7eb;
 
-  --#{$prefix}-card-radius: 0.625rem;
   --#{$prefix}-radius-base: 0.375rem;
   --#{$prefix}-radius-sm: 0.125rem;
   --#{$prefix}-radius-lg: 0.5rem;
@@ -42,7 +41,8 @@
   --#{$prefix}-modal-padding: 1.5rem;
   --#{$prefix}-modal-max-width: 500px;
 
-  --#{$prefix}-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --#{$prefix}-font-family:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   --#{$prefix}-font-size-sm: 0.875rem;
   --#{$prefix}-font-size-base: 1rem;
