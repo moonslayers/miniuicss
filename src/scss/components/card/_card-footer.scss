@@ -2,7 +2,7 @@
 @use '../../abstracts/mixins' as *;
 
 .card-footer {
-  padding: 0 var(--#{$prefix}-modal-padding) var(--#{$prefix}-modal-padding);
+  padding: map-get($spacers, 3);
   background-color: transparent;
   border-top: 1px solid var(--#{$prefix}-border-color);
   display: flex;
