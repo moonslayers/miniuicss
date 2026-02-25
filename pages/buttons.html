@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons - MiniUI CSS</title>
+  </head>
+  <body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
+      <nav style="margin-bottom: 2rem">
+        <a href="/" style="text-decoration: none; color: var(--mui-primary-color)"
+          >← Back to Home</a
+        >
+      </nav>
+
+      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Buttons</h1>
+      <p style="margin-bottom: 2rem; color: var(--mui-text-color); opacity: 0.7">
+        Button components with variants, sizes, and states.
+      </p>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">Button Variants</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-info">Info</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">Button Ghost</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem">
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-ghost btn-sm">Ghost Small</button>
+        <button class="btn btn-ghost btn-lg">Ghost Large</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">Button Sizes</h2>
+      <div
+        style="
+          display: flex;
+          gap: 0.75rem;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+        "
+      >
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">All Colors - Small</h2>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem">
+        <button class="btn btn-sm btn-primary">Primary</button>
+        <button class="btn btn-sm btn-secondary">Secondary</button>
+        <button class="btn btn-sm btn-success">Success</button>
+        <button class="btn btn-sm btn-warning">Warning</button>
+        <button class="btn btn-sm btn-danger">Danger</button>
+        <button class="btn btn-sm btn-info">Info</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">All Colors - Large</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem">
+        <button class="btn btn-lg btn-primary">Primary</button>
+        <button class="btn btn-lg btn-secondary">Secondary</button>
+        <button class="btn btn-lg btn-success">Success</button>
+        <button class="btn btn-lg btn-warning">Warning</button>
+        <button class="btn btn-lg btn-danger">Danger</button>
+        <button class="btn btn-lg btn-info">Info</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">Disabled State</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 3rem">
+        <button class="btn btn-primary" disabled>Primary</button>
+        <button class="btn btn-secondary" disabled>Secondary</button>
+        <button class="btn btn-success" disabled>Success</button>
+        <button class="btn btn-warning" disabled>Warning</button>
+        <button class="btn btn-danger" disabled>Danger</button>
+        <button class="btn btn-info" disabled>Info</button>
+      </div>
+
+      <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--mui-border-color)" />
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem">Button Combinations</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.7">Common button patterns for different actions.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem">
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center">
+          <span style="opacity: 0.6; font-size: 0.875rem">Cancel / Confirm:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-primary">Confirm</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center">
+          <span style="opacity: 0.6; font-size: 0.875rem">Danger Action:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center">
+          <span style="opacity: 0.6; font-size: 0.875rem">Info Modal:</span>
+          <button class="btn btn-info">Close</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center">
+          <span style="opacity: 0.6; font-size: 0.875rem">Multiple Options:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-secondary">Save Draft</button>
+          <button class="btn btn-primary">Publish</button>
+        </div>
+      </div>
+
+      <div
+        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
+      >
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>
