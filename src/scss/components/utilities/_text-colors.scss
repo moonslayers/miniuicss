@@ -1,0 +1,25 @@
+@use '../../abstracts/variables' as *;
+
+.text-primary {
+  color: var(--#{$prefix}-primary) !important;
+}
+
+.text-secondary {
+  color: var(--#{$prefix}-secondary-text) !important;
+}
+
+.text-success {
+  color: var(--#{$prefix}-success) !important;
+}
+
+.text-warning {
+  color: var(--#{$prefix}-warning) !important;
+}
+
+.text-danger {
+  color: var(--#{$prefix}-danger) !important;
+}
+
+.text-info {
+  color: var(--#{$prefix}-info) !important;
+}

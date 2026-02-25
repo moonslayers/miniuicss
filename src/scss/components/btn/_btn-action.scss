@@ -1,0 +1,56 @@
+@use '../../abstracts/variables' as *;
+
+.btn-action {
+  background-color: var(--#{$prefix}-secondary);
+  border-color: var(--#{$prefix}-secondary);
+  color: var(--#{$prefix}-secondary-text);
+  border-radius: 50rem;
+  padding: 0.625rem 0.875rem;
+  font-size: var(--#{$prefix}-font-size-sm);
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  justify-content: flex-start;
+
+  i,
+  svg {
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover {
+    background-color: var(--#{$prefix}-primary);
+    border-color: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
+  }
+
+  &:active {
+    background-color: var(--#{$prefix}-primary-hover);
+    border-color: var(--#{$prefix}-primary-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}-primary);
+    outline-offset: 2px;
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: 0.4;
+
+    &,
+    &.text-danger,
+    &.text-primary,
+    &.text-secondary,
+    &.text-success,
+    &.text-warning,
+    &.text-info {
+      color: inherit !important;
+    }
+  }
+}
