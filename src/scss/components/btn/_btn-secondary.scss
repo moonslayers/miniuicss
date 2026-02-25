@@ -3,7 +3,7 @@
 .btn-secondary {
   background-color: var(--#{$prefix}-secondary);
   border-color: var(--#{$prefix}-secondary);
-  color: var(--#{$prefix}-secondary-text);
+  color: var(--#{$prefix}-text-secondary);
 
   &:hover {
     background-color: var(--#{$prefix}-secondary-hover);
@@ -24,7 +24,7 @@
 [data-theme='dark'] .btn-secondary {
   background-color: var(--#{$prefix}-secondary);
   border-color: var(--#{$prefix}-secondary);
-  color: var(--#{$prefix}-secondary-text);
+  color: var(--#{$prefix}-text-secondary);
 
   &:hover {
     background-color: var(--#{$prefix}-secondary-hover);
