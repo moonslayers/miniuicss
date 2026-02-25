@@ -1,0 +1,38 @@
+@use '../../abstracts/variables' as *;
+
+.btn-primary {
+  background-color: var(--#{$prefix}-primary);
+  border-color: var(--#{$prefix}-primary);
+  color: var(--#{$prefix}-primary-text);
+
+  &:hover {
+    background-color: var(--#{$prefix}-primary-hover);
+    border-color: var(--#{$prefix}-primary-hover);
+  }
+
+  &:active {
+    background-color: darken(#111827, 10%);
+    border-color: darken(#111827, 10%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}-primary);
+    outline-offset: 2px;
+  }
+}
+
+[data-theme='dark'] .btn-primary {
+  background-color: var(--#{$prefix}-primary);
+  border-color: var(--#{$prefix}-primary);
+  color: var(--#{$prefix}-primary-text);
+
+  &:hover {
+    background-color: var(--#{$prefix}-primary-hover);
+    border-color: var(--#{$prefix}-primary-hover);
+  }
+
+  &:active {
+    background-color: darken(#f8fafc, 10%);
+    border-color: darken(#f8fafc, 10%);
+  }
+}

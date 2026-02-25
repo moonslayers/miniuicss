@@ -3,304 +3,65 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniUI CSS - Demo Playground</title>
+    <title>MiniUI CSS - Strategic Minimalist UI</title>
   </head>
   <body>
-    <nav class="navbar" style="padding: 1rem 2rem; border-bottom: 1px solid var(--mui-border-color); background: var(--mui-bg-surface);">
-      <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h1 style="margin: 0; font-size: 1.5rem;">MiniUI CSS</h1>
-        <button id="themeToggle" class="btn btn-outline-primary" onclick="toggleTheme()">Toggle Theme</button>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
+      <h1 style="margin-bottom: 0.5rem; font-size: 2rem;">MiniUI CSS</h1>
+      <p style="margin-bottom: 2rem; color: var(--mui-text-color); opacity: 0.7;">Strategic Minimalist UI - Buttons</p>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Variants</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-info">Info</button>
       </div>
-    </nav>
- 
-    <div class="container" style="padding-top: 2rem; padding-bottom: 2rem;">
-      <div class="row">
-        <div class="col-12">
-          <h1 style="margin-bottom: 2rem;">MiniUI CSS Demo</h1>
-          <p style="margin-bottom: 2rem;">A minimalist CSS framework based on components with SCSS and Dark Mode support.</p>
-        </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Sizes</h2>
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-lg">Large</button>
       </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Typography</h2>
-        </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">All Colors - Small</h2>
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-sm btn-primary">Primary</button>
+        <button class="btn btn-sm btn-secondary">Secondary</button>
+        <button class="btn btn-sm btn-success">Success</button>
+        <button class="btn btn-sm btn-warning">Warning</button>
+        <button class="btn btn-sm btn-danger">Danger</button>
+        <button class="btn btn-sm btn-info">Info</button>
       </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-md-6">
-          <h1>Heading 1</h1>
-          <h2>Heading 2</h2>
-          <h3>Heading 3</h3>
-          <h4>Heading 4</h4>
-          <h5>Heading 5</h5>
-          <h6>Heading 6</h6>
-        </div>
-        <div class="col-md-6">
-          <p>This is a paragraph with <strong>bold</strong> and <em>italic</em> text.</p>
-          <p><code>Inline code</code> example with some text.</p>
-        </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">All Colors - Large</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-lg btn-primary">Primary</button>
+        <button class="btn btn-lg btn-secondary">Secondary</button>
+        <button class="btn btn-lg btn-success">Success</button>
+        <button class="btn btn-lg btn-warning">Warning</button>
+        <button class="btn btn-lg btn-danger">Danger</button>
+        <button class="btn btn-lg btn-info">Info</button>
       </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Buttons</h2>
-        </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Disabled State</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-primary" disabled>Primary</button>
+        <button class="btn btn-secondary" disabled>Secondary</button>
+        <button class="btn btn-success" disabled>Success</button>
+        <button class="btn btn-warning" disabled>Warning</button>
+        <button class="btn btn-danger" disabled>Danger</button>
+        <button class="btn btn-info" disabled>Info</button>
       </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <button class="btn btn-primary">Primary</button>
-          <button class="btn btn-secondary">Secondary</button>
-          <button class="btn btn-success">Success</button>
-          <button class="btn btn-danger">Danger</button>
-          <button class="btn btn-warning">Warning</button>
-          <button class="btn btn-info">Info</button>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <button class="btn btn-outline-primary">Outline Primary</button>
-          <button class="btn btn-outline-secondary">Outline Secondary</button>
-          <button class="btn btn-outline-success">Outline Success</button>
-          <button class="btn btn-outline-danger">Outline Danger</button>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <button class="btn btn-primary btn-sm">Small</button>
-          <button class="btn btn-primary">Default</button>
-          <button class="btn btn-primary btn-lg">Large</button>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Form Controls</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label class="form-label">Email address</label>
-            <input type="email" class="form-control" placeholder="name@example.com">
-            <small class="form-text">We'll never share your email with anyone else.</small>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Example select</label>
-            <select class="form-select">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check1">
-            <label class="form-check-label" for="check1">Check me out</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="check2">
-            <label class="form-check-label" for="check2">Check me out too</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio1">
-            <label class="form-check-label" for="radio1">Radio option 1</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="radio" id="radio2">
-            <label class="form-check-label" for="radio2">Radio option 2</label>
-          </div>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Input Groups</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-md-6">
-          <div class="input-group">
-            <span class="input-group-text">@</span>
-            <input type="text" class="form-control" placeholder="Username">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Recipient's username">
-            <span class="input-group-text">@example.com</span>
-          </div>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Cards</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card card-hover">
-            <div class="card-body">
-              <h5 class="card-title">Hover Card</h5>
-              <p class="card-text">This card has a hover effect.</p>
-            </div>
-          </div>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Alerts</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-          </div>
-          <div class="alert alert-success" role="alert">
-            A simple success alert—check it out!
-          </div>
-          <div class="alert alert-danger" role="alert">
-            A simple danger alert—check it out!
-          </div>
-          <div class="alert alert-warning" role="alert">
-            A simple warning alert—check it out!
-          </div>
-          <div class="alert alert-info" role="alert">
-            A simple info alert—check it out!
-          </div>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Grid System</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-12
-          </div>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-6" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-6
-          </div>
-        </div>
-        <div class="col-6" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-6
-          </div>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-4" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-4
-          </div>
-        </div>
-        <div class="col-4" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-4
-          </div>
-        </div>
-        <div class="col-4" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-primary); color: white; padding: 1rem; border-radius: 4px;">
-            col-4
-          </div>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-md-3" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-success); color: white; padding: 1rem; border-radius: 4px;">
-            col-md-3
-          </div>
-        </div>
-        <div class="col-md-3" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-success); color: white; padding: 1rem; border-radius: 4px;">
-            col-md-3
-          </div>
-        </div>
-        <div class="col-md-3" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-success); color: white; padding: 1rem; border-radius: 4px;">
-            col-md-3
-          </div>
-        </div>
-        <div class="col-md-3" style="margin-bottom: 1rem;">
-          <div style="background: var(--mui-success); color: white; padding: 1rem; border-radius: 4px;">
-            col-md-3
-          </div>
-        </div>
-      </div>
- 
-      <div class="row">
-        <div class="col-12">
-          <h2>Modal</h2>
-        </div>
-      </div>
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <button class="btn btn-primary" onclick="toggleModal()">Launch demo modal</button>
-        </div>
-      </div>
- 
-      <div class="row" style="margin-bottom: 2rem;">
-        <div class="col-12">
-          <p style="color: var(--mui-text-secondary); font-size: 0.875rem;">
-            Built with Vite, SCSS, and modern CSS features. Dark mode supported via CSS variables.
-          </p>
-        </div>
+
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">Toggle Dark Mode</button>
       </div>
     </div>
- 
-    <div class="modal fade" id="exampleModal" style="display: none;">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="btn-close" onclick="toggleModal()">&times;</button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" onclick="toggleModal()">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
-    </div>
- 
-    <div class="modal-backdrop fade" id="modalBackdrop" style="display: none;"></div>
- 
+
     <script type="module" src="/src/main.js"></script>
     <script>
       function toggleTheme() {
@@ -308,27 +69,6 @@
         const currentTheme = html.getAttribute('data-theme')
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
         html.setAttribute('data-theme', newTheme)
-      }
- 
-      function toggleModal() {
-        const modal = document.getElementById('exampleModal')
-        const backdrop = document.getElementById('modalBackdrop')
-        
-        if (modal.style.display === 'none' || modal.style.display === '') {
-          modal.style.display = 'block'
-          backdrop.style.display = 'block'
-          setTimeout(() => {
-            modal.classList.add('show')
-            backdrop.classList.add('show')
-          }, 10)
-        } else {
-          modal.classList.remove('show')
-          backdrop.classList.remove('show')
-          setTimeout(() => {
-            modal.style.display = 'none'
-            backdrop.style.display = 'none'
-          }, 300)
-        }
       }
     </script>
   </body>

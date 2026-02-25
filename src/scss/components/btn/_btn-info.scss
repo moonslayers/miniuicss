@@ -1,0 +1,22 @@
+@use '../../abstracts/variables' as *;
+
+.btn-info {
+  background-color: var(--#{$prefix}-info);
+  border-color: var(--#{$prefix}-info);
+  color: var(--#{$prefix}-info-text);
+
+  &:hover {
+    background-color: var(--#{$prefix}-info-hover);
+    border-color: var(--#{$prefix}-info-hover);
+  }
+
+  &:active {
+    background-color: darken(#7dd3fc, 10%);
+    border-color: darken(#7dd3fc, 10%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}-info);
+    outline-offset: 2px;
+  }
+}

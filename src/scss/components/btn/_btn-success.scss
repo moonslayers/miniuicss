@@ -1,0 +1,22 @@
+@use '../../abstracts/variables' as *;
+
+.btn-success {
+  background-color: var(--#{$prefix}-success);
+  border-color: var(--#{$prefix}-success);
+  color: var(--#{$prefix}-success-text);
+
+  &:hover {
+    background-color: var(--#{$prefix}-success-hover);
+    border-color: var(--#{$prefix}-success-hover);
+  }
+
+  &:active {
+    background-color: darken(#86efac, 10%);
+    border-color: darken(#86efac, 10%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}-success);
+    outline-offset: 2px;
+  }
+}

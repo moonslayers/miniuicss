@@ -1,0 +1,22 @@
+@use '../../abstracts/variables' as *;
+
+.btn-danger {
+  background-color: var(--#{$prefix}-danger);
+  border-color: var(--#{$prefix}-danger);
+  color: var(--#{$prefix}-danger-text);
+
+  &:hover {
+    background-color: var(--#{$prefix}-danger-hover);
+    border-color: var(--#{$prefix}-danger-hover);
+  }
+
+  &:active {
+    background-color: darken(#fca5a5, 10%);
+    border-color: darken(#fca5a5, 10%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--#{$prefix}-danger);
+    outline-offset: 2px;
+  }
+}
