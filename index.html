@@ -8,7 +8,7 @@
   <body>
     <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem;">
       <h1 style="margin-bottom: 0.5rem; font-size: 2rem;">MiniUI CSS</h1>
-      <p style="margin-bottom: 2rem; color: var(--mui-text-color); opacity: 0.7;">Strategic Minimalist UI - Buttons</p>
+      <p style="margin-bottom: 2rem; color: var(--mui-text-color); opacity: 0.7;">Strategic Minimalist UI - Buttons, Cards & Modals</p>
 
       <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Variants</h2>
       <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
@@ -18,6 +18,13 @@
         <button class="btn btn-warning">Warning</button>
         <button class="btn btn-danger">Danger</button>
         <button class="btn btn-info">Info</button>
+      </div>
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Ghost</h2>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-ghost btn-sm">Ghost Small</button>
+        <button class="btn btn-ghost btn-lg">Ghost Large</button>
       </div>
 
       <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Sizes</h2>
@@ -48,7 +55,7 @@
       </div>
 
       <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Disabled State</h2>
-      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2rem;">
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 3rem;">
         <button class="btn btn-primary" disabled>Primary</button>
         <button class="btn btn-secondary" disabled>Secondary</button>
         <button class="btn btn-success" disabled>Success</button>
@@ -57,7 +64,134 @@
         <button class="btn btn-info" disabled>Info</button>
       </div>
 
-      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;">
+      <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--mui-border-color);">
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Card Examples</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+        <div class="card">
+          <div class="card-header card-header--with-border">
+            <h5 class="card-title">Basic Card</h5>
+          </div>
+          <div class="card-body">
+            <p>This is a simple card with header, body and footer. It follows the Clean Enterprise aesthetic with generous spacing and elegant shadows.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card Without Header</h5>
+            <p style="margin-top: 0.5rem; opacity: 0.8;">This card only has a body section. Perfect for simple content displays.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header card-header--with-border">
+            <h5 class="card-title">Confirmation</h5>
+          </div>
+          <div class="card-body">
+            <p style="opacity: 0.8;">Are you sure you want to proceed with this action?</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-danger">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--mui-border-color);">
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Modal Examples</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.7;">Modals are displayed with their overlay by default for preview purposes.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+        <div class="modal-overlay">
+          <div class="modal-dialog">
+            <div class="card">
+              <div class="card-header card-header--with-border">
+                <h5 class="card-title">Confirmation Modal</h5>
+              </div>
+              <div class="card-body">
+                <p style="opacity: 0.8;">This is a confirmation modal. The overlay provides visual isolation, and the modal uses a soft shadow to create elevation.</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-ghost">Cancel</button>
+                <button class="btn btn-primary">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-overlay">
+          <div class="modal-dialog">
+            <div class="card">
+              <div class="card-header card-header--with-border">
+                <h5 class="card-title">Delete Item</h5>
+              </div>
+              <div class="card-body">
+                <p style="opacity: 0.8;">Are you sure you want to delete this item? This action cannot be undone.</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-ghost">Cancel</button>
+                <button class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-overlay">
+          <div class="modal-dialog">
+            <div class="card">
+              <div class="card-header card-header--with-border">
+                <h5 class="card-title">Information</h5>
+              </div>
+              <div class="card-body">
+                <p style="opacity: 0.8;">Your changes have been saved successfully. The modal uses a Clean Enterprise aesthetic with strategic minimalism.</p>
+              </div>
+              <div class="card-footer">
+                <button class="btn btn-info">Got it</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr style="margin: 3rem 0; border: 0; border-top: 1px solid var(--mui-border-color);">
+
+      <h2 style="margin-bottom: 1rem; font-size: 1.25rem;">Button Combinations</h2>
+      <p style="margin-bottom: 2rem; opacity: 0.7;">Common button patterns for different actions.</p>
+
+      <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 3rem;">
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center;">
+          <span style="opacity: 0.6; font-size: 0.875rem;">Cancel / Confirm:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-primary">Confirm</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center;">
+          <span style="opacity: 0.6; font-size: 0.875rem;">Danger Action:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-danger">Delete</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center;">
+          <span style="opacity: 0.6; font-size: 0.875rem;">Info Modal:</span>
+          <button class="btn btn-info">Close</button>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 0.75rem; align-items: center;">
+          <span style="opacity: 0.6; font-size: 0.875rem;">Multiple Options:</span>
+          <button class="btn btn-ghost">Cancel</button>
+          <button class="btn btn-secondary">Save Draft</button>
+          <button class="btn btn-primary">Publish</button>
+        </div>
+      </div>
+
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color);">
         <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">Toggle Dark Mode</button>
       </div>
     </div>

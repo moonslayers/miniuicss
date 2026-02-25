@@ -3,6 +3,7 @@
 [data-theme='dark'] {
   --#{$prefix}-bg-color: #111827;
   --#{$prefix}-text-color: #f8fafc;
+  --#{$prefix}-bg-elevated: #374151;
 
   --#{$prefix}-primary: #f8fafc;
   --#{$prefix}-primary-hover: #f1f5f9;
@@ -27,4 +28,13 @@
   --#{$prefix}-info: #7dd3fc;
   --#{$prefix}-info-hover: #7dd3fc;
   --#{$prefix}-info-text: #111827;
+
+  --#{$prefix}-shadow-modal: 0 10px 25px rgba(0, 0, 0, 0.5);
+  --#{$prefix}-overlay-bg: rgba(0, 0, 0, 0.7);
+
+  --#{$prefix}-border-color: #374151;
+
+  --#{$prefix}-card-radius: 0.625rem;
+  --#{$prefix}-modal-padding: 1.5rem;
+  --#{$prefix}-modal-max-width: 500px;
 }

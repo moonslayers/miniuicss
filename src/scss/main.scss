@@ -3,6 +3,8 @@
 @use './themes/light' as *;
 @use './themes/dark' as *;
 @use './components/btn/index' as *;
+@use './components/card/index' as *;
+@use './components/modal/index' as *;
 
 *,
 *::before,

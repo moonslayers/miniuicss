@@ -47,3 +47,27 @@
 @mixin border-radius($radius: base) {
   border-radius: map-get($border-radius, $radius);
 }
+
+@mixin box-shadow($shadow: base) {
+  box-shadow: map-get($shadows, $shadow);
+}
+
+@mixin modal-centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

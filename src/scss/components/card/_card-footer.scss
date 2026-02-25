@@ -1,0 +1,18 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.card-footer {
+  padding: 0 var(--#{$prefix}-modal-padding) var(--#{$prefix}-modal-padding);
+  background-color: transparent;
+  border-top: 1px solid var(--#{$prefix}-border-color);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: auto;
+
+  &:last-child {
+    border-bottom-left-radius: var(--#{$prefix}-card-radius);
+    border-bottom-right-radius: var(--#{$prefix}-card-radius);
+  }
+}

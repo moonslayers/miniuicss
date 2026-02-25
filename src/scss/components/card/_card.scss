@@ -1,0 +1,18 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--#{$prefix}-bg-elevated);
+  border: 1px solid var(--#{$prefix}-border-color);
+  border-radius: var(--#{$prefix}-card-radius);
+  box-shadow: var(--#{$prefix}-shadow-modal);
+  width: 100%;
+  overflow: hidden;
+
+  & > hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

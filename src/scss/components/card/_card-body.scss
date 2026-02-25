@@ -1,0 +1,8 @@
+@use '../../abstracts/variables' as *;
+
+.card-body {
+  flex: 1 1 auto;
+  padding: var(--#{$prefix}-modal-padding);
+  color: var(--#{$prefix}-text-color);
+  line-height: 1.5;
+}
