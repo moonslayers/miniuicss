@@ -10,9 +10,4 @@
     border-top-left-radius: var(--#{$prefix}-card-radius);
     border-top-right-radius: var(--#{$prefix}-card-radius);
   }
-
-  &--with-border {
-    border-bottom: 1px solid var(--#{$prefix}-border-color);
-    padding-bottom: var(--#{$prefix}-modal-padding);
-  }
 }
