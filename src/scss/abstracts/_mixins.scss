@@ -1,0 +1,219 @@
+@mixin respond-to($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    @media (min-width: map-get($grid-breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else if $breakpoint == 'xs' {
+    @content;
+  }
+}
+
+@mixin respond-to-max($breakpoint) {
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+    $max: map-get($grid-breakpoints, $breakpoint) - 1px;
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($grid-breakpoints, $lower) and map-has-key($grid-breakpoints, $upper) {
+    @media (min-width: map-get($grid-breakpoints, $lower)) and (max-width: map-get($grid-breakpoints, $upper) - 1px) {
+      @content;
+    }
+  }
+}
+
+@mixin make-container($gutter: 1rem) {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: calc(var(--#{$prefix}-gutter-x) * 0.5);
+  padding-left: calc(var(--#{$prefix}-gutter-x) * 0.5);
+
+  @each $breakpoint, $max-width in $container-max-widths {
+    @include respond-to($breakpoint) {
+      max-width: $max-width;
+    }
+  }
+}
+
+@mixin make-row($gutter: 1rem) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: calc($gutter * -0.5);
+  margin-left: calc($gutter * -0.5);
+}
+
+@mixin make-col-ready($gutter: 1rem) {
+  position: relative;
+  width: 100%;
+  padding-right: calc($gutter * 0.5);
+  padding-left: calc($gutter * 0.5);
+}
+
+@mixin make-col($size, $columns: 12) {
+  flex: 0 0 percentage($size / $columns);
+  max-width: percentage($size / $columns);
+}
+
+@mixin make-col-offset($size, $columns: 12) {
+  margin-left: if($size == 0, 0, percentage($size / $columns));
+}
+
+@mixin generate-columns($grid-columns: 12) {
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include make-col($i, $grid-columns);
+    }
+  }
+}
+
+@mixin generate-responsive-columns($grid-columns: 12) {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @if $breakpoint != 'xs' {
+      @include respond-to($breakpoint) {
+        @for $i from 1 through $grid-columns {
+          .col-#{$breakpoint}-#{$i} {
+            @include make-col($i, $grid-columns);
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: $background;
+  background-color: transparent;
+  border-color: $border;
+
+  &:hover {
+    color: $hover-background;
+    background-color: rgba($background, 0.1);
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($background, 0.25);
+  }
+
+  &:active,
+  &.active {
+    color: $active-background;
+    background-color: rgba($background, 0.2);
+    border-color: $active-border;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $background;
+    background-color: transparent;
+    border-color: $border;
+  }
+}
+
+@mixin button-solid-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+  color: #fff;
+  background-color: $background;
+  border-color: $border;
+
+  &:hover {
+    color: #fff;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($background, 0.25);
+  }
+
+  &:active,
+  &.active {
+    color: #fff;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $background;
+    border-color: $border;
+  }
+}
+
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    transition: map-get($transitions, base);
+  } @else if length($transition) == 1 {
+    $property: nth($transition, 1);
+    transition: $property map-get($transitions, base);
+  } @else {
+    transition: $transition;
+  }
+}
+
+@mixin box-shadow($shadow: base) {
+  box-shadow: map-get($shadows, $shadow);
+}
+
+@mixin border-radius($radius: base) {
+  border-radius: map-get($border-radius, $radius);
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+@mixin reset-text {
+  font-family: $font-family-base;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--#{$prefix}-text-color);
+  text-align: left;
+  background-color: var(--#{$prefix}-bg-color);
+}

@@ -1,0 +1,26 @@
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --#{$prefix}-bg-color: #111827;
+    --#{$prefix}-bg-surface: #1f2937;
+    --#{$prefix}-bg-elevated: #374151;
+    --#{$prefix}-text-color: #f9fafb;
+    --#{$prefix}-text-secondary: #9ca3af;
+    --#{$prefix}-text-muted: #6b7280;
+    --#{$prefix}-border-color: #374151;
+    --#{$prefix}-border-light: #4b5563;
+    --#{$prefix}-input-bg: #1f2937;
+    --#{$prefix}-input-border: #4b5563;
+    --#{$prefix}-primary: #60a5fa;
+    --#{$prefix}-primary-hover: #3b82f6;
+    --#{$prefix}-success: #4ade80;
+    --#{$prefix}-danger: #f87171;
+    --#{$prefix}-warning: #fbbf24;
+    --#{$prefix}-info: #38bdf8;
+
+    --#{$prefix}-shadow-sm: none;
+    --#{$prefix}-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+    --#{$prefix}-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4);
+    --#{$prefix}-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    --#{$prefix}-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5);
+  }
+}

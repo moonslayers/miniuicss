@@ -1,0 +1,79 @@
+.container {
+  @include make-container();
+
+  &-fluid {
+    @include make-container();
+    max-width: 100%;
+  }
+}
+
+.row {
+  @include make-row();
+
+  & > * {
+    @include make-col-ready();
+  }
+
+  @each $name, $value in $spacers {
+    &.g-#{$name} {
+      --#{$prefix}-gutter-x: #{$value};
+      --#{$prefix}-gutter-y: #{$value};
+      margin-right: calc($value * -0.5);
+      margin-left: calc($value * -0.5);
+
+      & > * {
+        padding-right: calc($value * 0.5);
+        padding-left: calc($value * 0.5);
+        margin-top: calc($value * 0.5);
+      }
+    }
+  }
+
+  @each $name, $value in $spacers {
+    &.gx-#{$name} {
+      --#{$prefix}-gutter-x: #{$value};
+      margin-right: calc($value * -0.5);
+      margin-left: calc($value * -0.5);
+
+      & > * {
+        padding-right: calc($value * 0.5);
+        padding-left: calc($value * 0.5);
+      }
+    }
+
+    &.gy-#{$name} {
+      --#{$prefix}-gutter-y: #{$value};
+
+      & > * {
+        margin-top: calc($value * 0.5);
+      }
+    }
+  }
+}
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+
+.col {
+  flex: 1 0 0%;
+
+  &-auto {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
+
+@include generate-columns($grid-columns);
+
+@include generate-responsive-columns($grid-columns);
+
+@each $breakpoint, $min-width in $grid-breakpoints {
+  @include respond-to($breakpoint) {
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-auto {
+        flex: 0 0 auto;
+        width: auto;
+      }
+    }
+  }
+}
