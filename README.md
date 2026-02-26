@@ -42,7 +42,7 @@ npm run format
 
 ## Project Structure
 
-```
+```md
 miniuicss/
 ├── src/
 │   ├── scss/
@@ -125,7 +125,7 @@ Visit the demo pages to see components in action:
 - [Action Menu](/pages/action-menu.html) - Action menu component
 - [Utilities](/pages/utilities.html) - Border and text color utilities
 
-### Dark Mode
+### Dark Mode Usage
 
 Dark mode is enabled automatically based on system preferences. To manually toggle:
 
