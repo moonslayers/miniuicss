@@ -1,6 +1,6 @@
 # MiniUI CSS
 
-A minimalist CSS framework based on components with SCSS and Dark Mode support. Bootstrap-like approach for modern interfaces with minimal configuration.
+A **Strategic Minimalist UI** framework - first-user oriented with subtle, mini interfaces designed to be ready to use and plug & play. Inspired by Bootstrap's syntax for class naming. Bootstrap users are welcome. Built with components, SCSS, and Dark Mode support for modern interfaces with minimal configuration.
 
 ## Features
 
