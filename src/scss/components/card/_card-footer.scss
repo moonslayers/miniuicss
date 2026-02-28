@@ -3,7 +3,7 @@
 
 .card-footer {
   padding: map-get($spacers, 3);
-  background-color: transparent;
+    background-color: var(--#{$prefix}-secondary);
   border-top: 1px solid var(--#{$prefix}-border-color);
   display: flex;
   justify-content: flex-end;
