@@ -1,6 +1,6 @@
 {
   "name": "miniuicss",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "description": "Strategic Minimalist UI framework - first-user oriented with subtle, mini interfaces. Ready to use, plug & play components with SCSS and Dark Mode support.",
   "main": "dist/scss/main.css",
   "scripts": {
