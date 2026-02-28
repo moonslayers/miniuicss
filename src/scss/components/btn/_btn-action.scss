@@ -1,8 +1,6 @@
 @use '../../abstracts/variables' as *;
 
 .btn-action {
-  background-color: var(--#{$prefix}-secondary);
-  border-color: var(--#{$prefix}-secondary);
   color: var(--#{$prefix}-text-primary);
   border-radius: 50rem;
   padding: 0.625rem 0.875rem;
@@ -30,6 +28,19 @@
   &:active {
     background-color: var(--#{$prefix}-primary-hover);
     border-color: var(--#{$prefix}-primary-hover);
+  }
+
+  &.active {
+    background-color: var(--#{$prefix}-secondary);
+    border-color: var(--#{$prefix}-secondary);
+    color: var(--#{$prefix}-text-primary);
+    cursor: default;
+
+    &:hover {
+      background-color: var(--#{$prefix}-secondary);
+      border-color: var(--#{$prefix}-secondary);
+      color: var(--#{$prefix}-text-primary);
+    }
   }
 
   &:focus-visible {

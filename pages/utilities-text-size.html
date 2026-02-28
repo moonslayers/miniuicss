@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Size Utilities - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
+      <nav style="margin-bottom: 2rem">
+        <a href="/utilities.html" style="text-decoration: none; color: var(--mui-primary-color)"
+          >← Back to Utilities</a
+        >
+      </nav>
+
+      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Text Size Utility Classes</h1>
+      <p style="margin-bottom: 2rem; opacity: 0.7">
+        Utility classes for text size. Matches the same sizing convention as buttons.
+      </p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        "
+      >
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.text-xs</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-xs" style="margin-bottom: 0.5rem">Extra small text size (0.75rem)</p>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;p class="text-xs"&gt;...&lt;/p&gt;
+            </code>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost btn-sm">Cancel</button>
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.text-sm</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-sm" style="margin-bottom: 0.5rem">Small text size (0.875rem)</p>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;p class="text-sm"&gt;...&lt;/p&gt;
+            </code>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost btn-sm">Cancel</button>
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.text-md</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-md" style="margin-bottom: 0.5rem">Medium text size (1rem)</p>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;p class="text-md"&gt;...&lt;/p&gt;
+            </code>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.text-lg</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-lg" style="margin-bottom: 0.5rem">Large text size (1.125rem)</p>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;p class="text-lg"&gt;...&lt;/p&gt;
+            </code>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost btn-lg">Cancel</button>
+            <button class="btn btn-primary btn-lg">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.text-xl</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-xl" style="margin-bottom: 0.5rem">Extra large text size (1.25rem)</p>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;p class="text-xl"&gt;...&lt;/p&gt;
+            </code>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost btn-lg">Cancel</button>
+            <button class="btn btn-primary btn-lg">Action</button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
+      >
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border Utilities - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
+      <nav style="margin-bottom: 2rem">
+        <a href="/utilities.html" style="text-decoration: none; color: var(--mui-primary-color)"
+          >← Back to Utilities</a
+        >
+      </nav>
+
+      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Border Utility Classes</h1>
+      <p style="margin-bottom: 2rem; opacity: 0.7">
+        Utility classes for adding borders to any element. Similar to Bootstrap.
+      </p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        "
+      >
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.border</h5>
+          </div>
+          <div class="card-body">
+            <div class="border" style="padding: 1rem; margin-bottom: 1rem">
+              This div has a full border
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.border-top & .border-bottom</h5>
+          </div>
+          <div class="card-body">
+            <div class="border-top" style="padding: 1rem; margin-bottom: 1rem">
+              This div has top and bottom borders
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.border-0</h5>
+          </div>
+          <div class="card-body">
+            <div class="border border-0" style="padding: 1rem; margin-bottom: 1rem">
+              This div has no border (border-0 overrides border)
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.border-left & .border-right</h5>
+          </div>
+          <div class="card-body">
+            <div class="border-left border-right" style="padding: 1rem; margin-bottom: 1rem">
+              This div has left and right borders
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">.border-start & .border-end</h5>
+          </div>
+          <div class="card-body">
+            <div class="border-start border-end" style="padding: 1rem; margin-bottom: 1rem">
+              This div has start and end borders (RTL-aware)
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Combined Borders</h5>
+          </div>
+          <div class="card-body">
+            <div class="border-top border-left" style="padding: 1rem; margin-bottom: 1rem">
+              Combined utility classes for custom borders
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Action</button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
+      >
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>
