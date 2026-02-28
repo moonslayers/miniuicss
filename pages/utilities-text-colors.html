@@ -7,35 +7,24 @@
   </head>
 
   <body>
-    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
-      <nav style="margin-bottom: 2rem">
-        <a href="/utilities.html" style="text-decoration: none; color: var(--mui-primary-color)"
-          >← Back to Utilities</a
-        >
+    <div class="container">
+      <nav class="mb-6">
+        <a href="/utilities.html" class="link-primary">← Back to Utilities</a>
       </nav>
 
-      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Text Color Utility Classes</h1>
-      <p style="margin-bottom: 2rem; opacity: 0.7">
+      <h1 class="h1">Text Color Utility Classes</h1>
+      <p class="text-description">
         Utility classes for text color. Designed for optimal readability in both light and dark
         modes.
       </p>
 
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-          margin-bottom: 2rem;
-        "
-      >
+      <div class="grid-cards">
         <div class="card">
           <div class="card-header">
             <h5 class="card-title">.text-primary</h5>
           </div>
           <div class="card-body">
-            <p class="text-primary" style="margin-bottom: 0.5rem">
-              Primary color text for emphasis
-            </p>
+            <p class="text-primary mb-3">Primary color text for emphasis</p>
             <code
               style="
                 display: block;
@@ -59,9 +48,7 @@
             <h5 class="card-title">.text-secondary</h5>
           </div>
           <div class="card-body">
-            <p class="text-secondary" style="margin-bottom: 0.5rem">
-              Secondary text for less emphasis
-            </p>
+            <p class="text-secondary mb-3">Secondary text for less emphasis</p>
             <code
               style="
                 display: block;
@@ -85,7 +72,7 @@
             <h5 class="card-title">.text-success</h5>
           </div>
           <div class="card-body">
-            <p class="text-success" style="margin-bottom: 0.5rem">Success message or status</p>
+            <p class="text-success mb-3">Success message or status</p>
             <code
               style="
                 display: block;
@@ -109,7 +96,7 @@
             <h5 class="card-title">.text-warning</h5>
           </div>
           <div class="card-body">
-            <p class="text-warning" style="margin-bottom: 0.5rem">Warning message or alert</p>
+            <p class="text-warning mb-3">Warning message or alert</p>
             <code
               style="
                 display: block;
@@ -133,9 +120,7 @@
             <h5 class="card-title">.text-danger</h5>
           </div>
           <div class="card-body">
-            <p class="text-danger" style="margin-bottom: 0.5rem">
-              Error message or destructive action
-            </p>
+            <p class="text-danger mb-3">Error message or destructive action</p>
             <code
               style="
                 display: block;
@@ -159,7 +144,7 @@
             <h5 class="card-title">.text-info</h5>
           </div>
           <div class="card-body">
-            <p class="text-info" style="margin-bottom: 0.5rem">Information or help text</p>
+            <p class="text-info mb-3">Information or help text</p>
             <code
               style="
                 display: block;
@@ -179,28 +164,28 @@
         </div>
       </div>
 
-      <div class="card" style="margin-bottom: 2rem">
+      <div class="card mb-8">
         <div class="card-header">
           <h5 class="card-title">Combined Usage Example</h5>
         </div>
         <div class="card-body">
-          <p class="text-primary" style="margin-bottom: 0.5rem">
+          <p class="text-primary mb-3">
             This is <span class="text-primary">primary text</span> for main content
           </p>
-          <p class="text-secondary" style="margin-bottom: 0.5rem">
+          <p class="text-secondary mb-3">
             This is <span class="text-secondary">secondary text</span> for supporting content
           </p>
-          <p class="text-success" style="margin-bottom: 0.5rem">
+          <p class="text-success mb-3">
             This is a <span class="text-success">success message</span> indicating something went
             well
           </p>
-          <p class="text-warning" style="margin-bottom: 0.5rem">
+          <p class="text-warning mb-3">
             This is a <span class="text-warning">warning message</span> for caution
           </p>
-          <p class="text-danger" style="margin-bottom: 0.5rem">
+          <p class="text-danger mb-3">
             This is an <span class="text-danger">error message</span> for failures
           </p>
-          <p class="text-info" style="margin-bottom: 0.5rem">
+          <p class="text-info mb-3">
             This is <span class="text-info">informational text</span> for help content
           </p>
         </div>
@@ -210,9 +195,7 @@
         </div>
       </div>
 
-      <div
-        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
-      >
+      <div class="mt-8 pt-6 border-top">
         <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
           Toggle Dark Mode
         </button>

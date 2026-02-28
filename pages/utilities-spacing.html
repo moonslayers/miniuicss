@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing Utilities - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="mb-6">
+        <a href="/utilities.html" class="link-primary">← Back to Utilities</a>
+      </nav>
+
+      <h1 class="h1">Spacing Utilities</h1>
+      <p class="text-description">Margin and padding utilities for spacing elements.</p>
+
+      <h2 class="h2">Margin Bottom</h2>
+      <p class="text-description-sm">Available from mb-0 to mb-8.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">All Values</h5>
+          </div>
+          <div class="card-body stack">
+            <p class="mb-0"><strong>.mb-0:</strong> margin-bottom: 0</p>
+            <p class="mb-0"><strong>.mb-1:</strong> margin-bottom: 0.25rem</p>
+            <p class="mb-0"><strong>.mb-2:</strong> margin-bottom: 0.5rem</p>
+            <p class="mb-0"><strong>.mb-3:</strong> margin-bottom: 0.75rem</p>
+            <p class="mb-0"><strong>.mb-4:</strong> margin-bottom: 1rem</p>
+            <p class="mb-0"><strong>.mb-5:</strong> margin-bottom: 1.5rem</p>
+            <p class="mb-0"><strong>.mb-6:</strong> margin-bottom: 2rem</p>
+            <p class="mb-0"><strong>.mb-8:</strong> margin-bottom: 3rem</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Common Usage</h5>
+          </div>
+          <div class="card-body stack">
+            <button class="btn btn-primary mb-3">Button with mb-3</button>
+            <button class="btn btn-secondary mb-2">Button with mb-2</button>
+            <button class="btn btn-success">Button with no margin</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Margin Top</h2>
+      <p class="text-description-sm">Available from mt-1 to mt-8.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">All Values</h5>
+          </div>
+          <div class="card-body stack">
+            <p class="mb-0"><strong>.mt-1:</strong> margin-top: 0.25rem</p>
+            <p class="mb-0"><strong>.mt-2:</strong> margin-top: 0.5rem</p>
+            <p class="mb-0"><strong>.mt-3:</strong> margin-top: 0.75rem</p>
+            <p class="mb-0"><strong>.mt-4:</strong> margin-top: 1rem</p>
+            <p class="mb-0"><strong>.mt-6:</strong> margin-top: 2rem</p>
+            <p class="mb-0"><strong>.mt-8:</strong> margin-top: 3rem</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Common Usage</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Separate sections with mt-8:</p>
+            <h2 class="h2 mb-3">Section 1</h2>
+            <p class="text-description-sm mb-3">Content for section 1.</p>
+            <h2 class="h2 mb-3 mt-6">Section 2</h2>
+            <p class="text-description-sm">Content for section 2.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Padding Top</h2>
+      <p class="text-description-sm">Available from pt-1 to pt-8.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">All Values</h5>
+          </div>
+          <div class="card-body stack">
+            <p class="mb-0"><strong>.pt-1:</strong> padding-top: 0.25rem</p>
+            <p class="mb-0"><strong>.pt-2:</strong> padding-top: 0.5rem</p>
+            <p class="mb-0"><strong>.pt-3:</strong> padding-top: 0.75rem</p>
+            <p class="mb-0"><strong>.pt-4:</strong> padding-top: 1rem</p>
+            <p class="mb-0"><strong>.pt-5:</strong> padding-top: 1.5rem</p>
+            <p class="mb-0"><strong>.pt-6:</strong> padding-top: 2rem</p>
+            <p class="mb-0"><strong>.pt-8:</strong> padding-top: 3rem</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Separator Pattern</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Use .mt-8 .pt-6 .border-top for separators:</p>
+            <div class="mt-8 pt-6 border-top">
+              <button class="btn btn-ghost">Cancel</button>
+              <button class="btn btn-primary">Confirm</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="mt-8 pt-6 border-top"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Combined Spacing</h2>
+      <p class="text-description-sm">Combine margin and padding utilities.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Section Header</h5>
+          </div>
+          <div class="card-body">
+            <h2 class="h2 mb-3">Section Title</h2>
+            <p class="text-description-sm mb-6">Section description text.</p>
+            <hr class="mt-6 mb-6 border-top" />
+            <p class="text-description-sm mb-0">Content after separator.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Vertical Spacing</h5>
+          </div>
+          <div class="card-body stack">
+            <div class="card">
+              <div class="card-body mb-3">Card 1 with mb-3</div>
+            </div>
+            <div class="card">
+              <div class="card-body mb-3">Card 2 with mb-3</div>
+            </div>
+            <div class="card">
+              <div class="card-body">Card 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-top">
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>

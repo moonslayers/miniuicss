@@ -1,0 +1,71 @@
+@use '../../abstracts/variables' as *;
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+  user-select: none;
+  line-height: 1.5;
+  position: relative;
+
+  input[type='radio'] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: transparent;
+    border: 2px solid var(--#{$prefix}-border-color);
+    border-radius: 50%;
+    transition: map-get($transitions, base);
+    flex-shrink: 0;
+  }
+
+  input[type='radio']:focus-visible + & {
+    &::before {
+      outline: 2px solid var(--#{$prefix}-primary);
+      outline-offset: 2px;
+    }
+  }
+
+  input[type='radio']:hover:not(:disabled) + & {
+    &::before {
+      border-color: var(--#{$prefix}-primary);
+    }
+  }
+
+  input[type='radio']:checked + & {
+    &::before {
+      border-color: var(--#{$prefix}-primary);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0.625rem;
+      transform: translate(-50%, -50%);
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: var(--#{$prefix}-primary);
+      border-radius: 50%;
+    }
+  }
+
+  input[type='radio']:disabled + &,
+  &.disabled {
+    &::before,
+    &::after {
+      opacity: 0.4;
+    }
+
+    cursor: not-allowed;
+  }
+}

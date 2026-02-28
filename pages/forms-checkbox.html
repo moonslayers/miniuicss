@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkboxes - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="mb-6">
+        <a href="/forms.html" class="link-primary">← Back to Forms</a>
+      </nav>
+
+      <h1 class="h1">Checkboxes</h1>
+      <p class="text-description">
+        Checkbox components for binary selections. States include unchecked, checked, indeterminate,
+        and disabled.
+      </p>
+
+      <h2 class="h2">Basic Checkbox States</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Unchecked & Checked</h5>
+          </div>
+          <div class="card-body stack">
+            <label class="checkbox">
+              <input type="checkbox" />
+              Unchecked
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" checked />
+              Checked
+            </label>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Disabled State</h5>
+          </div>
+          <div class="card-body stack">
+            <label class="checkbox">
+              <input type="checkbox" disabled />
+              Disabled (Unchecked)
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" checked disabled />
+              Disabled (Checked)
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Indeterminate State</h2>
+      <p class="text-description">
+        Indeterminate state for partial selections (set via JavaScript).
+      </p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Indeterminate Checkbox</h5>
+          </div>
+          <div class="card-body">
+            <label class="checkbox mb-3">
+              <input type="checkbox" id="indeterminate" />
+              Indeterminate State
+            </label>
+            <button
+              class="btn btn-sm btn-secondary"
+              onclick="document.getElementById('indeterminate').indeterminate = true"
+            >
+              Set Indeterminate
+            </button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">With Children (Demo)</h5>
+          </div>
+          <div class="card-body">
+            <label class="checkbox mb-3">
+              <input type="checkbox" id="parent-checkbox" />
+              Parent (Select All)
+            </label>
+            <div class="stack-sm indent-sm">
+              <label class="checkbox">
+                <input type="checkbox" name="child" value="1" />
+                Child 1
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="child" value="2" />
+                Child 2
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="child" value="3" />
+                Child 3
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Checkbox Groups</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Vertical Group</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm">Vertical group with multiple checkboxes:</p>
+            <div class="stack">
+              <label class="checkbox">
+                <input type="checkbox" name="options" value="1" />
+                Option 1
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="options" value="2" />
+                Option 2
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="options" value="3" />
+                Option 3
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Inline Group</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm">Inline group with multiple checkboxes:</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="checkbox">
+                <input type="checkbox" name="inline" value="1" />
+                Option A
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="inline" value="2" />
+                Option B
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="inline" value="3" />
+                Option C
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Interactive Examples</h2>
+      <p class="text-description">Complete interactive examples with all states combined.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Preferences</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm">Select your preferences:</p>
+            <div class="stack">
+              <label class="checkbox">
+                <input type="checkbox" name="prefs" value="email" />
+                Email notifications
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="prefs" value="sms" checked />
+                SMS alerts
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="prefs" value="push" />
+                Push notifications
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="prefs" value="newsletter" disabled />
+                Newsletter (Coming Soon)
+              </label>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Cancel</button>
+            <button class="btn btn-primary">Save Preferences</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Permissions</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm">Manage user permissions:</p>
+            <div class="stack">
+              <label class="checkbox">
+                <input type="checkbox" name="perms" value="read" checked />
+                Read access
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="perms" value="write" />
+                Write access
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="perms" value="delete" />
+                Delete access
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="perms" value="admin" />
+                Admin privileges
+              </label>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-ghost">Reset</button>
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-top">
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+
+      const parentCheckbox = document.getElementById('parent-checkbox')
+      const childCheckboxes = document.querySelectorAll('input[name="child"]')
+
+      parentCheckbox?.addEventListener('change', () => {
+        childCheckboxes.forEach(child => {
+          child.checked = parentCheckbox.checked
+          child.indeterminate = false
+        })
+      })
+
+      childCheckboxes.forEach(child => {
+        child.addEventListener('change', () => {
+          const checkedCount = Array.from(childCheckboxes).filter(c => c.checked).length
+          const totalCount = childCheckboxes.length
+
+          parentCheckbox.checked = checkedCount === totalCount
+          parentCheckbox.indeterminate = checkedCount > 0 && checkedCount < totalCount
+        })
+      })
+    </script>
+  </body>
+</html>

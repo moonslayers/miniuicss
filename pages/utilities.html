@@ -7,27 +7,19 @@
   </head>
 
   <body>
-    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
-      <nav style="margin-bottom: 2rem">
-        <a href="/" style="text-decoration: none; color: var(--mui-primary-color)"
-          >← Back to Home</a
-        >
+    <div class="container">
+      <nav class="mb-6">
+        <a href="/" class="link-primary">← Back to Home</a>
       </nav>
 
-      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Utility Classes</h1>
-      <p style="margin-bottom: 2rem; opacity: 0.7">
-        Utility classes for borders, text colors, and text sizes. Similar to Bootstrap's approach to
-        utility-first CSS.
+      <h1 class="h1">Utility Classes</h1>
+      <p class="text-description">
+        Utility classes for borders, text colors, text sizes, layout, spacing, typography, grid, and
+        flexbox. Similar to Bootstrap's approach to utility-first CSS.
       </p>
 
-      <div
-        style="
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 1.5rem;
-          margin-bottom: 3rem;
-        "
-      >
+      <h2 class="h2">Component Utilities</h2>
+      <div class="grid-cards">
         <a href="utilities-borders.html" style="text-decoration: none">
           <div
             class="card"
@@ -42,7 +34,7 @@
               <h5 class="card-title">Border Utilities</h5>
             </div>
             <div class="card-body">
-              <p style="opacity: 0.8; margin: 0">
+              <p class="text-description-sm">
                 Utility classes for adding borders to any element. Full border, directional borders,
                 and combined patterns.
               </p>
@@ -64,7 +56,7 @@
               <h5 class="card-title">Text Color Utilities</h5>
             </div>
             <div class="card-body">
-              <p style="opacity: 0.8; margin: 0">
+              <p class="text-description-sm">
                 Utility classes for text color. Primary, secondary, success, warning, danger, and
                 info colors with optimal readability.
               </p>
@@ -86,18 +78,132 @@
               <h5 class="card-title">Text Size Utilities</h5>
             </div>
             <div class="card-body">
-              <p style="opacity: 0.8; margin: 0">
-                Utility classes for text size. Matches the same sizing convention as buttons (xs,
-                sm, md, lg, xl).
+              <p class="text-description-sm">
+                Utility classes for text size. Matches to same sizing convention as buttons (xs, sm,
+                md, lg, xl).
               </p>
             </div>
           </div>
         </a>
       </div>
 
-      <div
-        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
-      >
+      <h2 class="h2">Layout Utilities</h2>
+      <div class="grid-cards">
+        <a href="utilities-layout.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Layout Utilities</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-description-sm">
+                Container, flexbox, and stack utilities for layout control. Includes .container,
+                .stack, .stack-sm, and .indent-sm.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="utilities-spacing.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Spacing Utilities</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-description-sm">
+                Margin and padding utilities for spacing elements. Available from mb-0 to mb-8, mt-1
+                to mt-8, and pt-1 to pt-8.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="utilities-typography.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Typography Utilities</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-description-sm">
+                Heading and text utilities for consistent typography. Includes .h1, .h2,
+                .text-description, .text-description-sm, and .link-primary.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <h2 class="h2">Display Utilities</h2>
+      <div class="grid-cards">
+        <a href="utilities-grid.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Grid Utilities</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-description-sm">
+                Grid utilities for responsive layouts. Includes .grid with gap and .grid-cards for
+                card layouts with 280px minimum width.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="utilities-flexbox.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Flexbox Utilities</h5>
+            </div>
+            <div class="card-body">
+              <p class="text-description-sm">
+                Flexbox utilities for alignment and layout control. Includes .flex, .flex-column,
+                .flex-wrap, .stack, .stack-sm, and gap utilities.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="mt-8 pt-6 border-top">
         <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
           Toggle Dark Mode
         </button>

@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Utilities - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="mb-6">
+        <a href="/utilities.html" class="link-primary">← Back to Utilities</a>
+      </nav>
+
+      <h1 class="h1">Flexbox Utilities</h1>
+      <p class="text-description">Flexbox utilities for alignment and layout control.</p>
+
+      <h2 class="h2">.flex</h2>
+      <p class="text-description-sm">Display flex.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Basic Flex</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Items arranged horizontally.</p>
+            <div class="flex" style="gap: 0.5rem">
+              <button class="btn btn-primary">1</button>
+              <button class="btn btn-secondary">2</button>
+              <button class="btn btn-success">3</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="flex"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Flex with Gap</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Combine .flex with gap utilities.</p>
+            <div class="flex gap-3">
+              <button class="btn btn-primary">1</button>
+              <button class="btn btn-secondary">2</button>
+              <button class="btn btn-success">3</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="flex gap-3"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">.flex-column</h2>
+      <p class="text-description-sm">Flex-direction column.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Vertical Flex</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Items arranged vertically.</p>
+            <div class="flex-column" style="gap: 0.5rem">
+              <button class="btn btn-primary">Top</button>
+              <button class="btn btn-secondary">Middle</button>
+              <button class="btn btn-success">Bottom</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="flex-column"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Card Footer Example</h5>
+          </div>
+          <div class="card-body">
+            <div class="card">
+              <div class="card-body">Card content here...</div>
+              <div class="card-footer">
+                <button class="btn btn-ghost">Cancel</button>
+                <button class="btn btn-primary">Action</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">.flex-wrap</h2>
+      <p class="text-description-sm">Flex-wrap wrap.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Wrapping Flex</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Items wrap to next line when needed.</p>
+            <div class="flex flex-wrap" style="gap: 0.5rem">
+              <button class="btn btn-primary">1</button>
+              <button class="btn btn-secondary">2</button>
+              <button class="btn btn-success">3</button>
+              <button class="btn btn-warning">4</button>
+              <button class="btn btn-danger">5</button>
+              <button class="btn btn-info">6</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="flex flex-wrap"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Inline Checkboxes</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Multiple checkboxes in a row that wrap.</p>
+            <div class="flex flex-wrap gap-6">
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option A
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option B
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option C
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option D
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">.stack</h2>
+      <p class="text-description-sm">Vertical stack with 0.75rem gap.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Vertical Stack</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Combine .flex + .flex-column + gap: 0.75rem.</p>
+            <div class="stack">
+              <button class="btn btn-primary">Button 1</button>
+              <button class="btn btn-secondary">Button 2</button>
+              <button class="btn btn-success">Button 3</button>
+              <button class="btn btn-warning">Button 4</button>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="stack"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Stack with Cards</h5>
+          </div>
+          <div class="card-body stack">
+            <div class="card">
+              <div class="card-body">
+                <p class="mb-0">Card Item 1</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="mb-0">Card Item 2</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <p class="mb-0">Card Item 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">.stack-sm</h2>
+      <p class="text-description-sm">Vertical stack with 0.5rem gap.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Tight Stack</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Smaller gap for tighter spacing.</p>
+            <div class="stack-sm">
+              <span>Item 1</span>
+              <span>Item 2</span>
+              <span>Item 3</span>
+              <span>Item 4</span>
+            </div>
+            <code
+              style="
+                display: block;
+                padding: 0.5rem;
+                background: var(--mui-secondary);
+                border-radius: 0.25rem;
+                font-size: 0.75rem;
+              "
+            >
+              &lt;div class="stack-sm"&gt;...&lt;/div&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Checkboxes Stack</h5>
+          </div>
+          <div class="card-body">
+            <div class="stack-sm">
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option 1
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option 2
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option 3
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" />
+                Option 4
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Gap Utilities</h2>
+      <p class="text-description-sm">Gap utilities from gap-1 to gap-6.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">All Gap Values</h5>
+          </div>
+          <div class="card-body">
+            <ul class="mb-0" style="padding-left: 1.5rem; margin: 0">
+              <li class="mb-2"><strong>.gap-1:</strong> gap: 0.25rem</li>
+              <li class="mb-2"><strong>.gap-2:</strong> gap: 0.5rem</li>
+              <li class="mb-2"><strong>.gap-3:</strong> gap: 0.75rem</li>
+              <li class="mb-2"><strong>.gap-4:</strong> gap: 1rem</li>
+              <li class="mb-2"><strong>.gap-5:</strong> gap: 1.25rem</li>
+              <li><strong>.gap-6:</strong> gap: 1.5rem</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Gap Usage</h5>
+          </div>
+          <div class="card-body">
+            <p class="text-description-sm mb-3">Different gap values:</p>
+            <div class="flex gap-1 mb-3">
+              <button class="btn btn-primary btn-sm">1</button>
+              <button class="btn btn-primary btn-sm">2</button>
+            </div>
+            <div class="flex gap-3 mb-3">
+              <button class="btn btn-secondary">1</button>
+              <button class="btn btn-secondary">2</button>
+              <button class="btn btn-secondary">3</button>
+            </div>
+            <div class="flex gap-6">
+              <button class="btn btn-success">1</button>
+              <button class="btn btn-success">2</button>
+              <button class="btn btn-success">3</button>
+              <button class="btn btn-success">4</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="h2">Combined Flexbox</h2>
+      <p class="text-description-sm">Combine flexbox utilities for complex layouts.</p>
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Button Group</h5>
+          </div>
+          <div class="card-body">
+            <div class="flex gap-3">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-success">Success</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">Form Controls</h5>
+          </div>
+          <div class="card-body">
+            <div class="stack">
+              <div class="flex gap-3">
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  Option A
+                </label>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  Option B
+                </label>
+              </div>
+              <div class="flex gap-3">
+                <button class="btn btn-ghost">Cancel</button>
+                <button class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-6 border-top">
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme ? 'dark' : 'light'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>

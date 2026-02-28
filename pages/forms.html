@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms - MiniUI CSS</title>
+  </head>
+
+  <body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem 1rem">
+      <nav style="margin-bottom: 2rem">
+        <a href="/" style="text-decoration: none; color: var(--mui-primary-color)"
+          >← Back to Home</a
+        >
+      </nav>
+
+      <h1 style="margin-bottom: 0.5rem; font-size: 2rem">Form Components</h1>
+      <p style="margin-bottom: 2rem; opacity: 0.7">
+        Checkbox and radio components with primary color theme. Accessible, minimal, and ready to
+        use.
+      </p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+          margin-bottom: 3rem;
+        "
+      >
+        <a href="forms-checkbox.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Checkboxes</h5>
+            </div>
+            <div class="card-body">
+              <p style="opacity: 0.8; margin: 0">
+                Checkbox components for binary selections. States include unchecked, checked,
+                indeterminate, and disabled.
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href="forms-radio.html" style="text-decoration: none">
+          <div
+            class="card"
+            style="
+              transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+              cursor: pointer;
+            "
+          >
+            <div class="card-header">
+              <h5 class="card-title">Radios</h5>
+            </div>
+            <div class="card-body">
+              <p style="opacity: 0.8; margin: 0">
+                Radio button components for single selections from a group. States include
+                unchecked, checked, and disabled.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div
+        style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--mui-border-color)"
+      >
+        <button id="themeToggle" class="btn btn-secondary" onclick="toggleTheme()">
+          Toggle Dark Mode
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+      function toggleTheme() {
+        const html = document.documentElement
+        const currentTheme = html.getAttribute('data-theme')
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+        html.setAttribute('data-theme', newTheme)
+      }
+    </script>
+  </body>
+</html>
